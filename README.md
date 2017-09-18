@@ -29,7 +29,7 @@ app:layout_constraintTop_toBottomOf="@id/btn1" 当前控件的顶部和id为btn1
 可以相对于父控件(parent, 也就是ConstraintLayout), 也可以相对于ConstraintLayout中的其他控件.  
 具体使用可以参见Main2Activity.  
 
-### 带gone的layout_goneMarginStart等
+### layout_goneMarginStart等
 * layout_goneMarginStart
 * layout_goneMarginEnd
 * layout_goneMarginLeft
