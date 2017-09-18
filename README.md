@@ -167,3 +167,11 @@ app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧�
 </android.support.constraint.ConstraintLayout>
 
 ```
+
+### Ratio
+ * app:layout_constraintDimensionRatio="16:9"  宽:高 = 16:9
+ * app:layout_constraintDimensionRatio="W,16:9"  宽:高 = 16:9, 并且约束宽(宽度不变, 修改高度)
+ * app:layout_constraintDimensionRatio="H,16:9"  宽:高 = 16:9, 并且约束高(高度不变, 修改宽度)
+
+### Chains  
+参见R.layout.activity_main3
