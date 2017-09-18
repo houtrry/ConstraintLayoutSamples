@@ -49,6 +49,17 @@
         android:textColor="@color/colorAccent"
         android:textAllCaps="false"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn2"/>
+        app:layout_constraintTop_toBottomOf="@id/btn3"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="layout_goneMarginLeft等相关属性的使用"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn4"/>
 
 </android.support.constraint.ConstraintLayout>

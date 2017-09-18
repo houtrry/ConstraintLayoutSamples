@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn1: {
@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
             }
             case R.id.btn4: {
                 toAty(Main5Activity.class);
+                break;
+            }
+            case R.id.btn5: {
+                toAty(Main6Activity.class);
                 break;
             }
         }
