@@ -20,4 +20,4 @@ egg:
 app:layout_constraintLeft_toLeftOf="parent" 当前控件的左侧和父控件的左侧对齐.  
 app:layout_constraintRight_toLeftOf="@+id/btn2" 当前控件的右侧和id为btn2的控件的左侧对齐.  
 app:layout_constraintTop_toBottomOf="@id/btn1" 当前控件的顶部和id为btn1的控件的底部对齐.  
-其他的也都是同样的套路.
+其他的也都是同样的套路.具体使用可以参见Main2Activity.  
