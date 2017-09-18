@@ -174,4 +174,14 @@ app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧�
  * app:layout_constraintDimensionRatio="H,16:9"  宽:高 = 16:9, 并且约束高(高度不变, 修改宽度)
 
 ### Chains  
-参见R.layout.activity_main3
+参见R.layout.activity_main3  
+### Guideline
+ 有三个属性.
+   * android:orientation="horizontal"  线条方向
+   * app:layout_constraintGuide_end="100dp"  线条距离parent的右侧(orientation="horizontal"时)或者底部(orientation="vertical"时)的距离
+   * app:layout_constraintGuide_begin="404dp"  线条距离parent的左侧(orientation="horizontal"时)或者顶部(orientation="vertical"时)的距离
+   * app:layout_constraintGuide_percent="0.8"  线条距离parent的左侧的距离占parent的宽度的比例(orientation="horizontal"时)或者线条距离parent的顶部的距离占parent的高度的比例(orientation="vertical"时)
+注意: 三者生效的优先级是  
+layout_constraintGuide_percent > layout_constraintGuide_begin > layout_constraintGuide_end.  
+也就是, 当layout_constraintGuide_percent存在时, layout_constraintGuide_begin和layout_constraintGuide_end都不会生效.
+当layout_constraintGuide_begin存在时, layout_constraintGuide_end不会生效
