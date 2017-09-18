@@ -103,4 +103,67 @@ app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧�
 用官网的图片说明  
 ![](https://developer.android.com/reference/android/support/constraint/resources/images/centering-positioning-bias.png)  
 控件A到左侧占控件左右间距之和的比值就是app:layout_constraintHorizontal_bias="0.9".  
-### Widgets
+### Widgets  
+* layout_constraintHorizontal_weight
+* layout_constraintVertical_weight  
+
+类似于LinearLayout中的widget属性.  
+参见R.layout.activity_main2  
+```
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.houtrry.constraintlayoutsamples.MainActivity">
+
+    ...
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="bt4"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/bt1"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bt5"/>
+
+    <Button
+        android:id="@+id/bt5"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@android:color/holo_red_light"
+        android:text="bt5"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/bt1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/bt4"
+        app:layout_constraintRight_toLeftOf="@+id/bt6"/>
+
+    <Button
+        android:id="@+id/bt6"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="bt6"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/bt1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/bt5"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
+
+```
