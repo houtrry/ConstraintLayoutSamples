@@ -1,6 +1,11 @@
 # ConstraintLayoutSamples
 ConstraintLayout的简单使用.  
-可以查看[Google的官方网站](https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html)以及[学习网站](https://developer.android.com/training/constraint-layout/index.html)学习相关知识.
+### 参考网站
+* [Google的官方网站](https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html)  
+* [Google的学习网站](https://developer.android.com/training/constraint-layout/index.html)
+* [解析ConstraintLayout的性能优势](https://mp.weixin.qq.com/s?__biz=MzAwODY4OTk2Mg==&mid=2652044589&idx=1&sn=36f09ada2b279b0c56fcd91085ebe93a&chksm=808d5d68b7fad47e4de2704b24e51fd57799d19f1f7b334aaa9bfa2671c34ca8cc6bcd493882&scene=21#wechat_redirect)
+* [Android新特性介绍，ConstraintLayout完全解析](http://blog.csdn.net/guolin_blog/article/details/53122387)
+* [拒绝拖拽 使用ConstraintLayout优化你的布局吧](https://mp.weixin.qq.com/s/vI-fPaNoJ7ZBlZcMkEGdLQ)
 
 ### 相对位置  
 * layout_constraintLeft_toLeftOf
@@ -175,6 +180,7 @@ app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧�
 
 ### Chains  
 参见R.layout.activity_main3  
+
 ### Guideline
  有三个属性.
    * android:orientation="horizontal"  
@@ -186,6 +192,7 @@ app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧�
 2. app:layout_constraintGuide_end="100dp"  线条距离parent的右侧(orientation="horizontal"时)或者底部(orientation="vertical"时)的距离
 3. app:layout_constraintGuide_begin="404dp"  线条距离parent的左侧(orientation="horizontal"时)或者顶部(orientation="vertical"时)的距离
 4. app:layout_constraintGuide_percent="0.8"  线条距离parent的左侧的距离占parent的宽度的比例(orientation="horizontal"时)或者线条距离parent的顶部的距离占parent的高度的比例(orientation="vertical"时).  
+
 注意: 三者生效的优先级是  
 layout_constraintGuide_percent > layout_constraintGuide_begin > layout_constraintGuide_end.  
 也就是, 当layout_constraintGuide_percent存在时, layout_constraintGuide_begin和layout_constraintGuide_end都不会生效.
