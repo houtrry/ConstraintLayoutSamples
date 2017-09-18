@@ -36,6 +36,7 @@ app:layout_constraintTop_toBottomOf="@id/btn1" 当前控件的顶部和id为btn1
 * layout_goneMarginTop
 * layout_goneMarginRight
 * layout_goneMarginBottom  
+
 可以参见代码activity_main6  
 ```
 <?xml version="1.0" encoding="utf-8"?>
