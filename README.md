@@ -69,3 +69,38 @@ app:layout_constraintTop_toBottomOf="@id/btn1" 当前控件的顶部和id为btn1
 
 ```
 对于btn2, 它的左侧通过layout_constraintLeft_toRightOf制定为btn1, 那如果btn1消失了该如何显示呢? 这个时候layout_goneMarginLeft就生效了, 此时相当于指定marginLeft为200. 那如果btn1正常显示呢? layout_goneMarginLeft并没有任何效果.  
+
+### bias
+* layout_constraintHorizontal_bias
+* layout_constraintVertical_bias  
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.houtrry.constraintlayoutsamples.Main4Activity">
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background="@color/colorAccent"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
+
+</android.support.constraint.ConstraintLayout>
+
+```  
+app:layout_constraintHorizontal_bias="0.9": 水平方向上, 假设控件左侧到parent左侧的间距和控件右侧到parent的右侧的总间距为1的话, 控件左侧到parent的左侧的间距占比为0.9, 那么, 控件右侧到parent的右侧的间距的占比为0.1.  
+用官网的图片说明  
+![](https://developer.android.com/reference/android/support/constraint/resources/images/centering-positioning-bias.png)  
+控件A到左侧占控件左右间距之和的比值就是app:layout_constraintHorizontal_bias="0.9".  
+### Widgets
